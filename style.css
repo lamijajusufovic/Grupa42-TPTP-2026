@@ -1,0 +1,100 @@
+        /* Kontejner za logo i meni */
+        .menu-container {
+            width: 80%;           
+            margin: 0 auto;       
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #845337; 
+            padding: 10px 20px;
+
+            position: fixed;   /* fiksira meni na vrh */
+            top: 0;            /* pozicija na samom vrhu */
+            left: 0;
+            right: 0;
+            width: 100%;       /* zauzima cijelu širinu ekrana */
+            z-index: 1000;     /* da bude iznad ostalog sadržaja */
+        }
+
+        .logo img {
+            width: 50pt;          
+            padding: 0px 20px;
+        }
+
+        /* Stil za navigaciju */
+        nav ul {
+            list-style-type: none; 
+            margin: 0;
+            padding: 0;
+            display: flex; 
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            color: rgb(255, 255, 255); 
+            text-decoration: none; 
+            padding: 0px 30px; /* razmak oko teksta */
+        }
+
+        nav ul li a:hover {
+            background-color: #ffffff; 
+            color: #845337; 
+        }
+
+        /* Pozadinska slika */
+        body {
+            background-image: url("slike/pozadina2.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 90vh;
+            margin: 0;
+        }
+
+        /* Tekst na vrhu */
+        h1 {
+            color: rgb(241, 138, 21);
+            text-align: center;
+            font-size: 100px;
+            text-shadow: 4px 4px 6px rgb(0, 0, 0);
+            margin-top: 70px; 
+        }
+
+        .hero {
+            height: 100vh;        
+            width: 100%;          
+            margin-top: 100px; /* razmak ispod fiksiranog menija */
+        }
+
+        .content {
+            background-color: rgba(255,255,255,0.9);
+            padding: 80px;
+            width: 80%;          
+            margin: 0 auto;      
+            margin-top: 50px;    
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #fefefe;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #845337;
+            color: white;
+        }
+
+        td {
+            background-color: #845337;
+            color: white;
+        }
