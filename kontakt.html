@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Azil "Šapica sreće" - Tuzla</title>
+    <link rel="stylesheet" href="kontakt_style.css">
+</head>
+
+<body>
+    <!-- Navigacija -->
+    <nav class="menu-container">
+        <a href="index.html" class="logo">
+            <img 
+                src="slike/logo3.png" 
+                alt="Logo stranice"
+            />
+        </a>
+        <ul>
+            <li><a href="sadrzaj.html">Sadrzaj</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="kontakt-box">
+        <h1 class="kontakt-naslov">Kontaktirajte nas</h1>
+        <p class="kontakt-podnaslov">Ukoliko imate pitanja za nas molimo vas popunite formu u nastavku.</p>
+        
+        <div class="forma-kontejner">
+            <form id="kontaktForma" action="#" method="POST">
+                
+                <div class="unos-polje">
+                    <label for="ime">Vaše ime i prezime:</label><br>
+                    <input type="text" id="ime" name="ime" placeholder="Unesite vaše ime" required>
+                </div>
+                <br>
+
+                <div class="unos-polje">
+                    <label for="email">Vaša email adresa:</label><br>
+                    <input type="email" id="email" name="email" placeholder="primjer@email.com" required>
+                </div>
+                <br>
+
+                <div class="unos-polje">
+                    <label for="poruka">Vaša poruka:</label><br>
+                    <textarea id="poruka" name="poruka" rows="5" placeholder="Napišite nam poruku ovdje..." required></textarea>
+                </div>
+                <br>
+
+                <button type="submit" class="dugme-posalji">Pošalji poruku</button>
+            </form>
+
+            <div id="porukaUspjeha" style="display: none; color: #28a745; margin-top: 15px; font-weight: bold;">
+                Hvala vam! Vaša poruka je uspješno poslana. Javit ćemo vam se ubrzo. 🐾
+            </div>
+        </div>
+    </div>
+
+    <script src="skripta.js"></script>
+
+</body>
+</html>
