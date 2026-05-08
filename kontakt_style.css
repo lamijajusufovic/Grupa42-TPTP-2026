@@ -1,0 +1,128 @@
+.menu-container {
+    margin: 0 auto;       
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #845337; 
+    padding: 10px 20px;
+    position: fixed;   
+    top: 0;           
+    left: 0;
+    right: 0;
+    width: 100%;      
+    z-index: 1000;    
+}
+
+.logo img {
+    width: 50pt;          
+    padding: 0px 20px;
+}
+
+nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    padding: 0px 30px; /* razmak oko teksta */
+}
+
+nav ul li a:hover {
+    background-color: #ffffff; 
+    color: #845337; 
+}
+
+.kontakt-box{
+    max-width:45lvw;
+    margin-left:3lvw;
+    margin-top: 96px; 
+    padding-top: 3px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.kontakt-naslov{
+    margin-top: 16px;
+    margin-left: 25px;
+    color:#845337;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.kontakt-podnaslov{
+    margin-top: 16px;
+    margin-left: 25px;
+    color:#845337;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.forma-kontejner {
+    max-width:40lvw;
+    margin-left:25px ;
+    background: #fff;
+}
+
+
+.unos-polje {
+    margin-bottom: 2px;
+}
+
+.forma-kontejner label {
+    display: block;
+    margin-bottom: 0px;
+    font-weight: 600;
+    color:#845337;
+}
+
+
+.forma-kontejner input[type="text"],
+.forma-kontejner input[type="email"],
+.forma-kontejner textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #845337;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.kontakt-poruka{
+    display: none; 
+    color: #28a745; 
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.dugme-posalji {
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: #845337; 
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 5px;
+}
