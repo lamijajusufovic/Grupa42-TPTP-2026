@@ -21,41 +21,66 @@
         </ul>
     </nav>
 
-    <div class="kontakt-box">
-        <h1 class="kontakt-naslov">Kontaktirajte nas</h1>
-        <p class="kontakt-podnaslov">Ukoliko imate pitanja za nas molimo vas popunite formu u nastavku.</p>
-        
-        <div class="forma-kontejner">
-            <form id="kontaktForma" action="#" method="POST">
-                
-                <div class="unos-polje">
-                    <label for="ime">Vaše ime i prezime:</label><br>
-                    <input type="text" id="ime" name="ime" placeholder="Unesite vaše ime" required>
+    <div class="kontakt-mapa">
+        <div class="kontakt-box">
+            <h1 class="kontakt-naslov">Kontaktirajte nas</h1>
+            <p class="kontakt-podnaslov">Ukoliko imate pitanja za nas molimo vas popunite formu u nastavku.</p>
+            
+            <div class="forma-kontejner">
+                <form id="kontaktForma" action="#" method="POST">
+                    
+                    <div class="unos-polje">
+                        <label for="ime">Vaše ime i prezime:</label><br>
+                        <input type="text" id="ime" name="ime" placeholder="Unesite vaše ime" required>
+                    </div>
+                    <br>
+
+                    <div class="unos-polje">
+                        <label for="email">Vaša email adresa:</label><br>
+                        <input type="email" id="email" name="email" placeholder="primjer@email.com" required>
+                    </div>
+                    <br>
+
+                    <div class="unos-polje">
+                        <label for="poruka">Vaša poruka:</label><br>
+                        <textarea id="poruka" name="poruka" rows="5" placeholder="Napišite nam poruku ovdje..." required></textarea>
+                    </div>
+                    <br>
+
+                    <button type="submit" class="dugme-posalji">Pošalji poruku</button>
+                </form>
+
+                <div id="porukaUspjeha" class="kontakt-poruka" >
+                    Hvala vam! Vaša poruka je uspješno poslana. Javit ćemo vam se ubrzo. 🐾
                 </div>
-                <br>
-
-                <div class="unos-polje">
-                    <label for="email">Vaša email adresa:</label><br>
-                    <input type="email" id="email" name="email" placeholder="primjer@email.com" required>
-                </div>
-                <br>
-
-                <div class="unos-polje">
-                    <label for="poruka">Vaša poruka:</label><br>
-                    <textarea id="poruka" name="poruka" rows="5" placeholder="Napišite nam poruku ovdje..." required></textarea>
-                </div>
-                <br>
-
-                <button type="submit" class="dugme-posalji">Pošalji poruku</button>
-            </form>
-
-            <div id="porukaUspjeha" style="display: none; color: #28a745; margin-top: 15px; font-weight: bold;">
-                Hvala vam! Vaša poruka je uspješno poslana. Javit ćemo vam se ubrzo. 🐾
             </div>
         </div>
-    </div>
 
-    <script src="skripta.js"></script>
+        <script src="skripta.js"></script>
+        
+        <div class="mapa-box">
+            <h1 class="kontakt-naslov">Posjetite nas</h1>
+            <p class="kontakt-podnaslov">ADRESA: Franjevačka 2, Tuzla</p>
+            <p class="kontakt-podnaslov">RADNO VRIJEME: Od 08:00h do 16:00h</p>
+            <div class="telefon-red">
+                <span>BROJ TELEFONA:</span>
+                <a href="tel:+38761123456">+387 61 123 456</a>
+            </div>
+            
+            <div class="mapa-kontejner">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.894953051688!2d18.671561075006395!3d44.53778339477354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ead228316a251%3A0x2165318fba877f3d!2sFranjeva%C4%8Dka%202%2C%20Tuzla%20Grad%2075000!5e0!3m2!1shr!2sba!4v1778794745160!5m2!1shr!2sba" 
+                    width="600" 
+                    height="390" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>

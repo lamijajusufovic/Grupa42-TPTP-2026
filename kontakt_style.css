@@ -42,13 +42,16 @@ nav ul li a:hover {
 }
 
 .kontakt-box{
-    max-width:45lvw;
+    max-width:50vw;
     margin-left:3lvw;
     margin-top: 96px; 
+    flex: 1; 
+    min-width: 300px;
     padding-top: 3px;
     border-radius: 12px;
     background-color: #fff;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding-bottom: 25px;
 }
 
 .kontakt-naslov{
@@ -73,7 +76,7 @@ nav ul li a:hover {
 
 
 .forma-kontejner {
-    max-width:40lvw;
+    max-width:50vw;
     margin-left:25px ;
     background: #fff;
 }
@@ -94,7 +97,7 @@ nav ul li a:hover {
 .forma-kontejner input[type="text"],
 .forma-kontejner input[type="email"],
 .forma-kontejner textarea {
-    width: 100%;
+    width: 95%;
     padding: 12px 15px;
     border: 2px solid #845337;
     border-radius: 8px;
@@ -109,11 +112,11 @@ nav ul li a:hover {
     display: none; 
     color: #28a745; 
     font-weight: bold;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
 }
 
 .dugme-posalji {
-    width: 100%;
+    width: 95%;
     margin-bottom: 25px;
     background-color: #845337; 
     color: white;
@@ -125,4 +128,67 @@ nav ul li a:hover {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     margin-top: 5px;
+}
+
+
+.kontakt-mapa{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    align-items: flex-start;
+}
+
+.mapa-kontejner {
+    flex: 1;
+    min-width: 300px;
+    margin-top: 25px;
+    margin-right:25px ;
+}
+
+/* Osigurava da se iframe mape prilagodi širini kontejnera */
+.mapa-kontejner iframe {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    
+}
+
+
+.mapa-box{
+    max-width:50vw;
+    margin-top: 96px; 
+    margin-right: 36px;
+    flex: 1; 
+    min-width: 350px;
+    padding-top: 3px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+
+.mapa-box a{
+    color:#845337;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mapa-box a:hover{
+    color:#cea48c;
+}
+
+.telefon-red {
+    display: flex;
+    align-items: center; /* Vertikalno centrira tekst i broj */
+    margin-left: 25px; /* Poravnava sa vašim ostalim tekstom */
+    margin-top: 16px;
+}
+
+.telefon-red span {
+    color: #845337;
+    margin-right: 8px; /* Odmiče broj malo udesno od teksta */
 }
