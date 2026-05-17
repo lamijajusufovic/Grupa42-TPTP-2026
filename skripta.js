@@ -87,3 +87,4 @@ donacijaForma.addEventListener('reset', function() {
     // Sakrij poruku o uspješnoj donaciji ako je bila prikazana
     document.getElementById('porukaUspjehaDonacija').style.display = 'none';
 });
+
