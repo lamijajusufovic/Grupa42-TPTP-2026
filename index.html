@@ -8,17 +8,20 @@
 </head>
 <body>
   <!-- Glavni meni -->
-  <nav class="menu-container">
-    <a href="index.html" class="logo">
-      <img src="slike/logo3.png" alt="Logo stranice">
-    </a>
-    <ul>
-      <li><a class="btn-tamni"href="sadrzaj.html">Sadrzaj</a></li>
-      <li><a class="btn-tamni" href="kontakt.html">Kontakt</a></li>
-      <li><button id="dark-mode-toggle" class="btn-tamni">🌙 Tamni mod</button></li>
-      <li><a class="btn-tamni" href="https://github.com/lamijajusufovic/Grupa42-TPTP-2026" target="_blank">GitHub</a></li>
-    </ul>
-  </nav>
+ <nav class="menu-container">
+        <a href="index.html" class="logo">
+            <img 
+                src="slike/logo3.png" 
+                alt="Logo stranice"
+            />
+        </a>
+        <ul>
+            <li><a class="btn-tamni"href="sadrzaj.html">Sadrzaj</a></li>
+            <li><a class="btn-tamni" href="kontakt.html">Kontakt</a></li>
+            <li><button id="dark-mode-toggle" class="btn-tamni">🌙 Tamni mod</button></li>
+            <li><a class="btn-tamni" href="https://github.com/lamijajusufovic/Grupa42-TPTP-2026" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
 
 <div class="hero">
   <div class="hero-content">
@@ -124,7 +127,7 @@ Osim fizičke brige, važna je i socijalizacija. Životinje koje su prošle kroz
 
   <!-- Podaci o autoru -->
   <footer>
-    <p>Autori: Lamija Jusufović   |  Resuj Mujić  |  Lamija Jakubović  |    Azil "Šapica sreće" Tuzla 2026</p>
+    <p>Autori: Lamija Jusufović   |  Resul Mujić  |  Lamija Jakubović  |    Azil "Šapica sreće" Tuzla 2026</p>
     <p>Email: sapica.srece@gmail.com
     </p>
   </footer>
@@ -154,6 +157,21 @@ Osim fizičke brige, važna je i socijalizacija. Životinje koje su prošle kroz
             toggleButton.innerHTML = "🌙 Tamni mod";
         }
     });
+</script>
+<script>
+function searchCards() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    if (text.includes(input)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
 </script>
 
 
