@@ -77,14 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-// Slušaj kada korisnik klikne na reset dugme forme
 donacijaForma.addEventListener('reset', function() {
-    // Sakrij sve poruke o greškama
+    
     document.getElementById('greskaKartica').style.display = 'none';
     document.getElementById('greskaDatum').style.display = 'none';
     document.getElementById('greskaCvv').style.display = 'none';
     
-    // Sakrij poruku o uspješnoj donaciji ako je bila prikazana
     document.getElementById('porukaUspjehaDonacija').style.display = 'none';
 });
 
