@@ -44,17 +44,17 @@ nav ul li a:hover {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #eaeaea;
+    background-color: #ffffff;
 }
 
 /* HEADER */
 .header {
-    background-color: #7f9c99;
+    background-color: #ffffff;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: 845337;
 }
 
 .header h1 {
@@ -70,7 +70,7 @@ body {
 .btn {
     width: 50px;
     height: 15px;
-    background-color: #e7b2a5;
+    background-color: #ffffff;
     border-radius: 10px;
 }
 
@@ -78,7 +78,7 @@ body {
 .container {
     width: 85%;
     margin: 20px auto;
-    background-color: #dcdcdc;
+    background-color: #f2e6df;
     padding: 20px;
     border-radius: 10px;
     margin-top: 82px;
@@ -86,7 +86,7 @@ body {
 
 /* VELIKO POLJE (TABELA) */
 .table-box {
-    background-color: #cfcfcf;
+    background-color: #f4e6de;
     padding: 20px;
     border-radius: 10px;
 }
@@ -107,7 +107,7 @@ th, td {
 }
 
 th {
-    background-color: #7f9c99;
+    background-color: #845337;
     color: white;
 }
 
@@ -140,7 +140,10 @@ th {
     flex-wrap:wrap;
     margin-top: 28px;
 }
-
+.parrot {
+    object-fit: cover;
+    object-position: top;
+}
 /* OVALI */
 
 .animal{
@@ -173,7 +176,7 @@ th {
 }
 .bottom-box{
     margin-top:20px;
-    background:#d3d3d3;
+    background:#f2e6df;
     border-radius:10px;
     padding:20px;
 }
@@ -181,7 +184,7 @@ th {
 /* LISTA */
 
 details{
-    background:white;
+    background:#ffffff;
     margin-bottom:10px;
     padding:10px;
     border-radius:8px;
@@ -199,4 +202,188 @@ ul{
 
 .link-pocetak li{
     align-items: center;
+}
+.footer{
+    width:85%;
+    margin:20px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.back-top{
+    background:#f0b99a;
+    padding:12px 30px;
+    border-radius:25px;
+
+    text-decoration:none;
+    color:#5f5f5f;
+
+    font-weight:bold;
+    font-size:18px;
+
+    border:2px solid white;
+
+    box-shadow:0 2px 5px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+}
+
+.back-top:hover{
+    transform:scale(1.05);
+    background:#c5c5c5;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #000;
+    transition: 0.3s;
+}
+
+body.dark {
+    background: #121212;
+    color: #fff;
+}
+
+body.dark .card {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+body.dark .card p {
+    color: #ccc;
+}
+.btn {
+    margin: 15px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #000;
+    transition: 0.3s ease;
+}
+const toggleButton = document.getElementById('dark-mode-toggle');
+
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    if (document.body.classList.contains('dark')) {
+        toggleButton.innerHTML = "☀️ Svijetli mod";
+    } else {
+        toggleButton.innerHTML = "🌙 Tamni mod";
+    }
+});
+.btn-tamni {
+    background-color: #ffffff;
+    color: #845337;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+.btn-tamni:hover {
+    background-color: #f2e6df;
+}
+
+body.dark {
+    background: #121212 !important;
+    color: #ffffff !important;
+}
+
+body.dark .menu-container {
+    background-color: #1a1a1a !important;
+}
+
+body.dark nav ul li a {
+    color: #ffffff !important;
+}
+
+body.dark nav ul li a:hover {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+body.dark .btn-tamni {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+body.dark .btn-tamni:hover {
+    background-color: #444444;
+}
+
+body.dark .container,
+body.dark .table-box,
+body.dark .bottom-box {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+body.dark .top-box {
+    background: #2a2a2a !important;
+}
+
+body.dark .animal p {
+    color: #ffffff !important;
+}
+
+body.dark .circle {
+    border-color: #444444 !important;
+}
+
+body.dark table {
+    background: #242424 !important;
+}
+
+body.dark th {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+body.dark td {
+    border: 1px solid #444444 !important;
+    color: #ffffff !important;
+}
+
+body.dark .card {
+    background: #242424 !important;
+    color: #ffffff !important;
+}
+
+body.dark .card h3,
+body.dark .card p {
+    color: #ffffff !important;
+}
+
+body.dark details {
+    background: #242424 !important;
+    color: #ffffff !important;
+}
+
+body.dark summary {
+    color: #ffffff !important;
+}
+
+body.dark ul li {
+    color: #e0e0e0 !important;
+}
+
+body.dark .back-top {
+    background: #2a2a2a !important;
+    color: #ffffff !important;
+    border: 2px solid #444444 !important;
+}
+
+body.dark .back-top:hover {
+    background: #444444 !important;
 }

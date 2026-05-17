@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Šapica sreće</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  <link rel="stylesheet" href="sadrzaj_style.css">
 
@@ -17,6 +18,7 @@
             />
         </a>
         <ul>
+            <li><button id="dark-mode-toggle" class="btn-tamni">🌙 Tamni mod</button></li>
             <li><a href="sadrzaj.html">Sadrzaj</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
@@ -72,16 +74,56 @@
         </table>
     </div>
 
-    <!-- GALERIJA -->
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1" alt="Pas u azilu">
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131" alt="Mačka u azilu">
-        <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9" alt="Još jedan pas">
-        <img src="https://images.unsplash.com/photo-1511044568932-338cba0ad803" alt="Još jedna mačka">
-        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308" alt="Zec iz azila">
-        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3" alt="Papagaj iz azila">
+<div class="gallery">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=400&q=80">
+        <h3>Max</h3>
+        <p>Ovo je Max. On jako voli da se igra i trči sa drugim psima.</p>
     </div>
-  <div class="top-box">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=400&q=80">
+        <h3>Luna</h3>
+        <p>Ovo je Luna. Ona voli spavanje i maženje.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?auto=format&fit=crop&w=400&q=80">
+        <h3>Bobi</h3>
+        <p>Ovo je Bobi. On voli druženje sa ljudima.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=400&q=80">
+        <h3>Mimi</h3>
+        <p>Ovo je Mimi. Ona voli mrkvu i travu.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://www.tportal.hr/media/thumbnail/w1000/332234.jpeg">
+        <h3>Kiki</h3>
+        <p>Ovo je Kiki. On voli da pjeva tokom dana.</p>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&fit=crop&w=400&q=80">
+        <h3>Goldie</h3>
+        <p>Ovo je Goldie. Ona voli čistu vodu.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
+       
+    <!-- SADRŽAJ -->
+
+<div class="container">
+
+    <!-- GORNJI DIO -->
+
+    <div class="top-box">
 
         <!-- PAS -->
 
@@ -114,10 +156,11 @@
         <!-- PAPAGAJ -->
 
         <div class="animal">
+            
             <a href="https://bs.wikipedia.org/wiki/Papagaj" target="_blank">
 
                 <div class="circle">
-                    <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3" alt="Papagaj">
+                    <img src="https://www.tportal.hr/media/thumbnail/w1000/332234.jpeg">
                 </div>
 
             </a>
@@ -140,6 +183,7 @@
         </div>
 
     </div>
+
       <div class="bottom-box">
 
         <!-- PSI -->
@@ -213,11 +257,25 @@
             </ul>
         </details>
 
-    </div>
-<ul class="link-pocetak">
-            <li><a href="sadrzaj.html">Vrati na početak</a></li>
-        </ul>
-</div>
+<div class="footer">
 
+    <a href="#" class="back-top">
+        🐾 Vrati na početak 🐾
+    </a>
+
+</div>
+</div>
+<script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        if (document.body.classList.contains('dark')) {
+            toggleButton.innerHTML = "☀️ Svijetli mod";
+        } else {
+            toggleButton.innerHTML = "🌙 Tamni mod";
+        }
+    });
+</script>
 </body>
 </html>
