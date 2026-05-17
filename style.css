@@ -3,12 +3,15 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 /* Hero sekcija */
+
 .hero {
-  background: linear-gradient(rgba(132, 83, 55, 0.7), rgba(0,0,0,0.6)), 
-              url("slike/pozadina2.png") center/cover no-repeat;
+  background: linear-gradient(rgba(132, 83, 55, 0.7), rgba(0,0,0,0.6)),
+              url("slike/pozadina2.png") no-repeat center center;
+  background-size: cover;   /* ovo osigurava da slika bude responzivna */
   height: 100vh;
   display: flex;
   align-items: center;
@@ -19,42 +22,6 @@ body, html {
 }
 
 
-/* Vertikalni pomoćni meni */
-
-.secondary-nav {
-  position: absolute;       
-  top: 50%;                 /* Centrirano po visini */
-  left: 30px;               /* Malo odmaknuto od lijeve ivice */
-  transform: translateY(-50%);
-}
-
-.secondary-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;   /* Vertikalni raspored */
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}
-
-.secondary-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  padding: 10px 18px;
-  border-radius: 25px;
-  transition: all 0.3s ease;
-  background: rgba(255,255,255,0.1);
-}
-
-.secondary-nav ul li a:hover {
-  background: #f18a15;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-
-/* Glavni naslov */
 .hero-text h1 {
   font-size: 70px;
   color: #f18a15;
@@ -72,58 +39,51 @@ body, html {
 
 /* Glavni meni */
 .menu-container {
+  margin: 0 auto;       
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(132, 83, 55, 0.9); /* poluprozirna boja da se uklopi uz sliku */
+  background-color: #845337; 
   padding: 10px 20px;
-  position: fixed;
-  top: 0;
+  position: fixed;   
+  top: 0;           
   left: 0;
   right: 0;
-  width: 100%;
-  z-index: 1000;
+  width: 100%;      
+  z-index: 1000;    
+  font-family: Arial, sans-serif; /* ispravljeno */
 }
 
 .logo img {
-  width: 50pt;
+  width: 50pt;          
+  padding: 0px 20px;
 }
 
 nav ul {
-  list-style-type: none;
-  display: flex;
+  list-style-type: none; 
   margin: 0;
   padding: 0;
+  display: flex; 
 }
 
 nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0 30px;
-  font-weight: bold;
+  display: inline-block;
+  color: #fff; 
+  text-decoration: none; 
+  padding: 0px 30px;
 }
 
 nav ul li a:hover {
-  background-color: #fff;
-  color: #5d3017;
-  border-radius: 4px;
+  background-color: #fff; 
+  color: #845337; 
 }
 
 /* Pomoćni meni */
-.search-box {
-  text-align: center;
-  margin: 20px 0;
-}
-
-#searchInput {
-  width: 60%;
-  padding: 10px;
-  border: 2px solid #f18a15;
-  border-radius: 25px;
-  font-size: 16px;
-}
-
 .secondary-nav {
+  position: absolute;       
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
   background-color: rgba(238, 179, 111, 0.9);
   padding: 20px;
   margin: 20px;
@@ -133,13 +93,12 @@ nav ul li a:hover {
 }
 
 .secondary-nav ul {
-  list-style-type: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;   /* default vertikalno */
+  gap: 15px;
   padding: 0;
   margin: 0;
-}
-
-.secondary-nav li {
-  margin-bottom: 10px;
 }
 
 .secondary-nav a {
@@ -156,6 +115,92 @@ nav ul li a:hover {
   background-color: #633f29;
   color: #fff;
 }
+
+/* Tableti */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+  .secondary-nav {
+    position: static;   /* skida absolute */
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+}
+
+/* Mobiteli */
+@media (max-width: 480px) {
+.menu-container {
+    flex-direction: column;   /* stavke idu ispod loga */
+    align-items: center;
+  }
+
+  .menu-container ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .secondary-nav {
+    position: static;
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .secondary-nav ul {
+    display: flex !important;
+    flex-direction: row !important; /* horizontalno na mobitelu */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .secondary-nav a {
+    display: inline-block;
+    padding: 6px 12px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  #searchInput {
+    width: 90%;
+    font-size: 14px;
+  }
+}
+
+/* Search box */
+.search-box {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#searchInput {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #f18a15;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+
 
 /* Kartice */
 
