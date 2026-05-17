@@ -13,9 +13,10 @@
       <img src="slike/logo3.png" alt="Logo stranice">
     </a>
     <ul>
-      <li><a href="sadrzaj.html">Sadržaj</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-      <li><a href="https://github.com/lamijajusufovic/Grupa42-TPTP-2026" target="_blank">GitHub</a></li>
+      <li><a class="btn-tamni"href="sadrzaj.html">Sadrzaj</a></li>
+      <li><a class="btn-tamni" href="kontakt.html">Kontakt</a></li>
+      <li><button id="dark-mode-toggle" class="btn-tamni">🌙 Tamni mod</button></li>
+      <li><a class="btn-tamni" href="https://github.com/lamijajusufovic/Grupa42-TPTP-2026" target="_blank">GitHub</a></li>
     </ul>
   </nav>
 
@@ -129,6 +130,7 @@ Osim fizičke brige, važna je i socijalizacija. Životinje koje su prošle kroz
   </footer>
   <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" 
    class="back-to-top"></a>
+ 
 <script>
   const backToTop = document.querySelector('.back-to-top');
 
@@ -140,17 +142,20 @@ Osim fizičke brige, važna je i socijalizacija. Životinje koje su prošle kroz
     }
   });
 </script>
-<script>
-  const toggleButton = document.getElementByld('dark-mode-toggle');
 
-toggleButton.addEventListener('click',() => {
-  document.body.classList.contains('dark')){
-    toggleButton.innerHTML = "Svijetli mod";
-  }
-  else{
-    toggleButton.innerHTML = "Tamni mod";
-  }
+<script>
+  const toggleButton = document.getElementById('dark-mode-toggle');
+
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        if (document.body.classList.contains('dark')) {
+            toggleButton.innerHTML = "☀️ Svijetli mod";
+        } else {
+            toggleButton.innerHTML = "🌙 Tamni mod";
+        }
+    });
 </script>
+
 
 </body>
 </html>
