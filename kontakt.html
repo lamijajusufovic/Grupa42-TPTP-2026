@@ -5,6 +5,9 @@
     <title>Azil "Šapica sreće" - Tuzla</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+
+    
 </head>
 
 <body>
@@ -162,7 +165,7 @@
 </div>
 <div>
 <footer>
-    <p>Autori: Lamija Jusufović   |  Resuj Mujić  |  Lamija Jakubović  |    Azil "Šapica sreće" Tuzla 2026</p>
+    <p>Autori: Lamija Jusufović   |  Resul Mujić  |  Lamija Jakubović  |    Azil "Šapica sreće" Tuzla 2026</p>
     <p>Email: sapica.srece@gmail.com
     </p>
 </footer>
@@ -247,8 +250,19 @@
 
 
     </script>
+    <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" 
+   class="back-to-top"></a>
+    <script>
+  const backToTop = document.querySelector('.back-to-top');
 
-
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) { 
+      backToTop.style.display = 'block'; // pojavi se kad skroluješ
+    } else {
+      backToTop.style.display = 'none';  // nestane kad si na vrhu
+    }
+  });
+</script>
 
 </body>
 </html>

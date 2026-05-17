@@ -247,6 +247,8 @@ footer {
 
 
 
+
+
 /* SADRZAJ */
 
 
@@ -1139,5 +1141,26 @@ body.dark .back-top:hover {
     border-radius: 4px;     
     cursor: pointer;
 }
+
+
+
+body.dark .forma-kontejner input[type="text"],
+body.dark .forma-kontejner input[type="email"],
+body.dark .forma-kontejner textarea,
+body.dark .forma-donacije input[type="text"],
+body.dark .forma-donacije input[type="email"],
+body.dark .forma-donacije input[type="number"],
+body.dark .forma-donacije select {
+    background-color: #1a1a1a !important; 
+    color: #ffffff !important;            
+    border: 2px solid #444444 !important; 
+}
+
+
+body.dark input::placeholder, 
+body.dark textarea::placeholder {
+    color: #aaaaaa !important;            
+}
+
 
 
