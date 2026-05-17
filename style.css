@@ -211,6 +211,97 @@ nav ul li a:hover {
     }
 }
 
+@media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    /* Glavni meni - slažemo ga vertikalno i centriramo */
+    .menu-container {
+        flex-direction: column !important;   
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 10px 0 !important; 
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .logo img {
+        width: 40pt; 
+        padding: 0 5px;
+        margin-bottom: 5px;        /* Malo razmaka prije linkova */
+    }
+
+    nav ul {
+        justify-content: center;   /* Centriramo linkove vodoravno */
+        flex-wrap: wrap;           /* Ako nema mjesta, idu u novi red, neće pobjeći lijevo */
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li a {
+        padding: 5px 8px;          /* Malo više vertikalnog prostora za klik prstom */
+        font-size: 0.9rem; 
+    }
+
+    /* Pomoćni meni - fiksiran na vrhu, centriran */
+    .secondary-nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 115px;                /* Fiksira ga TAČNO ispod glavnog menija unutar koordinata ekrana */
+        margin: 0 auto 15px auto;
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        border-radius: 0;          /* Ide od ivice do ivice ekrana */
+        box-sizing: border-box;
+    }
+
+    .secondary-nav ul {
+        display: flex !important;
+        flex-direction: row !important; 
+        flex-wrap: wrap;
+        justify-content: center;   /* Centriramo stavke unutar pomoćnog menija */
+        gap: 10px;
+        padding: 0;
+    }
+
+    .secondary-nav a {
+        display: inline-block;
+        padding: 6px 12px;
+    }
+
+    /* Ostatak sadržaja se spušta da ga fiksni meniji ne prekriju */
+    .container {
+        margin-top: 180px !important; /* Dovoljno prostora za oba menija na vrhu */
+    }
+
+    .hero {
+        padding-top: 180px;
+        box-sizing: border-box;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    #searchInput {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
 /* Search box */
 .search-box {
   text-align: center;
